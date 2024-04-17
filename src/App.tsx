@@ -63,7 +63,7 @@ function App() {
    
     if (winner==null) {
       if (answers[r_index][c_index] == null) {
-        const newAnswers = answers;
+        const newAnswers = [...answers];
         newAnswers[r_index][c_index] = player ? 'X' : 'O';
         setAnswers(newAnswers);
         setPlayer(!player);
